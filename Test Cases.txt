@@ -1,0 +1,49 @@
+===============================================================================
+<< -----------------------------  NOVONIL DAS  ----------------------------- >>
+===============================================================================
+
+Source Code :	FrequencyCounter.c
+Input Files :	LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt
+OutputFile :	Result.txt
+Compile :		cc FrequencyCounter.c
+Execute :		./a.out 6 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt Result.txt
+
+================================================================================
+
+-----------------------------------------------------------------------
+							Test Cases
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+1. Correct Input
+
+Input: 	./a.out 6 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt Result.txt
+Output: The children processes has completed writing
+		The parent process is terminating
+
+-----------------------------------------------------------------------
+2. Number of files provided in command is more than n
+
+Input: 	./a.out 5 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt Result.txt
+Output:	Number of input files and the count of files doesnot match.
+-----------------------------------------------------------------------
+
+3. Number of files provided in command is less than n.
+
+Input: 	./a.out 7 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt Result.txt
+Output: Number of input files and the count of files doesnot match.
+-----------------------------------------------------------------------
+
+4. One input file doesnot exist.
+
+Input: 	./a.out 6 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test11.txt Result.txt
+Output: File Test11.txt doesnot exist all files before this has been written to the output
+		The children processes has completed writing
+		The parent process is terminating
+
+-----------------------------------------------------------------------
+
+5. N is negative
+
+Input: 	./a.out -1 LongFile1.txt LongFile2.txt LongFile3.txt LongFile4.txt New.c Test1.txt Result.txt
+Output: Number of files not enough.
